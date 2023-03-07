@@ -1,9 +1,5 @@
 <?php
-      //get the data from the form
-     // we use the superglobal variable called $_POST which is a associative array
-
-     //check if our superglobal var which is an array is empty or not
-
+     
      if(isset($_POST['submit'])){
         $username = $_POST['username'];
         
@@ -20,7 +16,7 @@
          
 
         //use mysqli api to connect to the  DB
-        $connect = mysqli_connect('locahost', 'root','','loginapp'); 
+        $connect = mysqli_connect('localhost', 'root','','loginapp'); 
        
         //check if the connection was successful
         if($connect){
@@ -31,6 +27,19 @@
             die("Database connection failed");
         }
 
+
+        // CREATING DATA using queries
+
+       $query = "INSERT INTO users( username,password) ";
+       $query .= "VALUES ('$username','$password')";
+
+        //    send query to DB
+      $result = mysqli_query($connect, $query);
+
+    // check if query was sent
+    if(!$result){
+        die('query failed' . mysqli_error());
+    }
      }
 
 ?>
@@ -47,7 +56,7 @@
 <body>
     
 <div class='col-xs-6'>
-    <form action='login.php' method="post">
+    <form action='createRecords.php' method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" name="username" class="form-control">

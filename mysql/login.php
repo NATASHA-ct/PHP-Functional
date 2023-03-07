@@ -20,7 +20,7 @@
          
 
         //use mysqli api to connect to the  DB
-        $connect = mysqli_connect('locahost', 'root','','loginapp'); 
+        $connect = mysqli_connect('localhost', 'root','','loginapp'); 
        
         //check if the connection was successful
         if($connect){
