@@ -1,3 +1,20 @@
+<?php
+      //get the data from the form
+     // we use the superglobal variable called $_POST which is a associative array
+
+     //check if our superglobal var which is an array is empty or not
+
+     if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        
+         $password = $_POST['password'];
+                   
+         echo "WELCOME  " .$username;
+       
+     }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
