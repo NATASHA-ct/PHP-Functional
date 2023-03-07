@@ -19,7 +19,8 @@
         }
          
 
-        
+        //use mysqli api to connect to the  DB
+        $connect = mysqli_connect('locahost', 'root','','loginapp'); 
        
      }
 
