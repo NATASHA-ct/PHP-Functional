@@ -13,7 +13,7 @@
         }
 
 
-        // CREATING DATA using queries
+        // fetching DATA using queries
 
        $query = "SELECT * FROM users";
        
