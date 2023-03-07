@@ -8,8 +8,18 @@
         $username = $_POST['username'];
         
          $password = $_POST['password'];
-                   
-         echo "WELCOME  " .$username;
+             
+        //check if   data ws successfully collected
+
+        if ($username && $password){
+            echo "WELCOME  " .$username;
+        }
+        else{
+            echo "Please enter a valid name" . "<br>" . "name should be more that 3 char";
+        }
+         
+
+        
        
      }
 
