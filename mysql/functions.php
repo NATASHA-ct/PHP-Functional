@@ -4,7 +4,7 @@ include "db.php";
 function allData(){
 
 $query = "SELECT * FROM users";
-       global $connect 
+       global $connect ;
         //    send query to DB
       $result = mysqli_query($connect, $query);
 
