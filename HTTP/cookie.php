@@ -1,6 +1,16 @@
 <?php
-     echo $_POST['submit'];
-      
+    //  set $_COOKIE
+
+    // It takes 3 values, name . value . expiry date
+
+    $name = "name";
+    $value =100;
+    $week = (60*60*24*7);
+    $expiration = time() + $week;
+
+
+    setcookie($name,$value,$expiration);
+
 
 ?>
 
@@ -16,7 +26,7 @@
 <body>
     
 <div class='col-xs-6'>
-    <form action='post.php' method="post">
+    <form action='cookie.php' method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" name="username" class="form-control">
