@@ -41,5 +41,21 @@
 </div>
 
 
+<!-- what to do if the cookie is set , if we get its value-->
+<?php
+if (isset($_COOKIE["name"])){
+
+    // after getting the cookie value assign a name
+   $someOne = $_COOKIE["name"];
+   echo $someOne;
+
+}
+else{
+$someOne = "";
+}
+
+?>
+
+
 </body>
 </html>
