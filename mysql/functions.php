@@ -3,8 +3,14 @@ include "db.php";
 
 function allData(){
 
+
+
+    // create a query
 $query = "SELECT * FROM users";
        global $connect ;
+
+
+
         //    send query to DB
       $result = mysqli_query($connect, $query);
 

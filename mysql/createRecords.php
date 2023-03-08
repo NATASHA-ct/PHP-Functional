@@ -27,6 +27,10 @@
             die("Database connection failed");
         }
 
+// To avoid SQL injection, we need to clean up the query before sending it!
+
+$username = mysqli_real_escape_string($connect, $username);
+$password = mysqli_real_escape_string($connect, $password);
 
         // CREATING DATA using queries
 
