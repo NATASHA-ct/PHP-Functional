@@ -32,6 +32,14 @@
 $username = mysqli_real_escape_string($connect, $username);
 $password = mysqli_real_escape_string($connect, $password);
 
+
+$hashFormat = "$2y$10$";
+$salt = "rtyuiodfghjuytresdfg22";
+
+// encrypting the password
+$H_salt = $hashFormat . $salt;
+
+$password =crypt($password,$H_salt);
         // CREATING DATA using queries
 
        $query = "INSERT INTO users( username,password) ";
