@@ -1,17 +1,10 @@
 <?php
-    //  set $_COOKIE
+//  to start a session , which making a file in the browser
+// session start has to b on every page where i need to use the session 
+session_start();
 
-    // It takes 3 values, name . value . expiry date
-
-    $name = "name";
-    $value =100;
-    $week = (60*60*24*7);
-    $expiration = time() + $week;
-
-
-    setcookie($name,$value,$expiration);
-
-
+// add new value
+$_SESSION['greeting'] ="Hello Student";
 ?>
 
 <!DOCTYPE html>
@@ -43,16 +36,7 @@
 
 <!-- what to do if the cookie is set , if we get its value-->
 <?php
-if (isset($_COOKIE["name"])){
 
-    // after getting the cookie value assign a name
-   $someOne = $_COOKIE["name"];
-   echo $someOne;
-
-}
-else{
-$someOne = "";
-}
 
 ?>
 
