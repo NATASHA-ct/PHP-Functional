@@ -24,4 +24,12 @@ if (method_exists("Car","MoveWheels")){
 
 }
 
+// create car object
+
+$bmw = new Car();
+
+// call the function on object
+
+$bmw->MoveWheels();
+
 ?>
