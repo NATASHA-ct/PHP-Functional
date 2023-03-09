@@ -8,12 +8,19 @@ class Car{
   var   $engine = 1;
    var $doors = 4;
 
+//    constructur
+function __construct(){
+
+}
+
     // creating a function
      function MoveWheels(){
         echo "Wheels move";
         // changing val for wheels
-        $this->wheels = 10;
+        
      }
+
+
 }
 
 // using built in function to check if it exist.
