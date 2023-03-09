@@ -12,7 +12,11 @@ class Car{
 
 //  only inside this class not even on extended classes  
    private  $engine = 1;
-   var $doors = 4;
+
+//it is attached to the class so it cant be referrenced by an object
+  static $doors = 4;
+
+
 
 //    constructur
 function __construct(){
@@ -53,5 +57,8 @@ $bmw->MoveWheels();
 echo "<br>";
 // echo the value of wheels
 echo $bmw->wheels;
+
+// using a static variable
+echo Car::$doors;
 
 ?>
