@@ -31,13 +31,13 @@ if (method_exists("Car","MoveWheels")){
 echo "<br>";
 // create car object
 
-$bmw = new Car();
+// $bmw = new Car();
 
-// call the function on object
+// // call the function on object
 
-$bmw->MoveWheels();
-echo "<br>";
-// echo the value of wheels
-echo $bmw->wheels;
+// $bmw->MoveWheels();
+// echo "<br>";
+// // echo the value of wheels
+// echo $bmw->wheels;
 
 ?>
