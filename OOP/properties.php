@@ -2,10 +2,16 @@
 
 // creating a class
 class Car{
-    // properties of a car
-   var $wheels = 5;
-   var $hood = 1;
-  var   $engine = 1;
+
+// properties of a car
+//can be used anywhere
+   public $wheels = 5;
+
+//can only be used inside the class by its methods , therefore objects of this class cant use them or extended classes
+   protected $hood = 1;
+
+//  only inside this class not even on extended classes  
+   private  $engine = 1;
    var $doors = 4;
 
 //    constructur
@@ -17,6 +23,7 @@ function __construct(){
      function MoveWheels(){
         echo "Wheels move";
         // changing val for wheels
+      echo  $this->hood = 14;
         
      }
 
@@ -36,15 +43,15 @@ if (method_exists("Car","MoveWheels")){
 
 }
 echo "<br>";
-// create car object
+//create car object
 
-// $bmw = new Car();
+$bmw = new Car();
 
-// // call the function on object
+// call the function on object
 
-// $bmw->MoveWheels();
-// echo "<br>";
-// // echo the value of wheels
-// echo $bmw->wheels;
+$bmw->MoveWheels();
+echo "<br>";
+// echo the value of wheels
+echo $bmw->wheels;
 
 ?>
