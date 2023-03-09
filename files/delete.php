@@ -1,5 +1,5 @@
 <?php
 
-// use unlink function
-unlink("delete_test.php");
+// use unlink function it will deete the file in brackets
+unlink("delete_file.php");
 ?>
